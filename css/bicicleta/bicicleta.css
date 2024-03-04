@@ -1,0 +1,147 @@
+.bicicletas-bg{
+    background-color: var(--cor-11);
+}
+
+.bicicleta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+.bikeimages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 800px;
+    gap: 20px;
+}
+.bikeimages img{
+    object-fit: cover;
+}
+.bike1 {
+    grid-column: 1 / -1;
+    height: 80px;
+}
+.bike-rigth p{
+    margin-bottom: 30px;
+}
+.rigth-b {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 40px;
+}
+.rigth-b a{
+    max-width: max-content;
+}
+.rigth-b-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.rigth-b-flex span{
+    background-color: var(--cor-12);
+    max-width: max-content;
+    display: flex;
+    gap: 10px;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+.bike-infos{
+    background-color: var(--cor-12);
+    margin-top: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.bike-infos img{
+    width: 24px;
+}
+.bike-infos ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+}
+.bike-infos ul li h3{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.ficha-tec {
+    background-color: var(--cor-12);
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 120px;
+}
+.ficha-tec ul li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--cor-11);
+    margin-bottom: 8px;
+}
+.ficha-tec ul li:last-child{
+    border-bottom: none;
+}
+.ficha-tec ul{
+    padding: 40px 40px 20px 40px;
+}
+
+.pedale-bg {
+    background-color: var(--cor-11);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    box-shadow: inset 0 80px var(--cor-0), inset 0 -80px var(--cor-12);
+}
+.textoseguro {
+    align-self: center;
+    padding: 40px
+}
+.textoseguro h2{
+    margin-bottom: 20px;
+}
+.textoseguro p{
+    margin-bottom: 20px;
+}
+.pedale-img{
+    margin-left: 200px;
+}
+.pedale-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+@media (max-width:1300px) {
+    .pedale-bg {
+        box-shadow: none;
+    }
+    .pedale-img{
+        margin-left: -200px;
+    }
+}
+@media (max-width:900px) {
+    .bikeimages {
+        grid-template-columns: 1fr;
+        height: 90%;
+    }
+}
+@media (max-width:750px) {
+    .bicicleta {
+        grid-template-columns: 1fr;
+    }
+    .bike1{
+        margin-bottom: 340px;
+    }
+    .other{
+        display: none;
+    }
+
+    
+}
+@media (max-width:600px) {
+    .pedale-bg {
+        grid-template-columns: 1fr;
+    }
+    .pedale-img {
+        max-height: 500px
+    }
+   
+}

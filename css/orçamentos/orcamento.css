@@ -1,0 +1,14 @@
+.orc-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.form-left {
+    background-color: var(--cor-12);
+    padding: 80px 60px 80px 60px;
+}
+.form-left h3{
+    margin-bottom: 20px;
+}
+.form-left label, input{
+    padding: 10px;
+}

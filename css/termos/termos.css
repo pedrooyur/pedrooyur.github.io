@@ -1,0 +1,16 @@
+.bg{
+    background-color: var(--cor-11);
+}
+
+.termos-c {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.termos-c h2{
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.termos-c p{
+    margin-bottom: 24px;
+    max-width: 75ch;
+}

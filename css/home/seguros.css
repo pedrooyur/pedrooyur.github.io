@@ -1,0 +1,93 @@
+.seguros-bg {
+    background-color: var(--cor-11);
+}
+.seguros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.seguros h2{
+    grid-column: 1 / -1;
+}
+
+.prata {
+    background-color: var(--cor-12);
+    margin: 30px -0px 50px -10px;
+    padding: 60px 40px 60px 60px;
+    border-radius: 4px;
+}
+.prata ul{
+    position: relative;
+}
+.prata li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.prata li::before {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 9px;
+    position: absolute;
+    background: url(/img/icones/lista.svg);
+    left: -21px;
+}
+.prata a{
+    margin: 20px;
+    margin-bottom: -10px;
+    color: var(--cor-0);
+    background: var(--cor-10);
+}
+.prata a:hover{
+    background: var(--cor-9);
+}
+.seguros-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    position: relative;
+}
+.mensalidade::after {
+    content: "mensal";
+    font-size: 0.65rem;
+    position: absolute;
+    bottom: -10px;
+    right: 0px;
+    color: var(--cor-6);
+}
+
+.ouro {
+    background-color: var(--cor-12);
+    padding: 60px;
+    border-radius: 4px;
+}
+.ouro ul{
+    position: relative;
+}
+.ouro li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ouro li::before {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 9px;
+    position: absolute;
+    background: url(/img/icones/lista.svg);
+    left: -21px;
+}
+
+.ouro a{
+    margin: 20px 20px 0px 20px
+}
+
+@media (max-width:800px) {
+    .seguros {
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+   
+    }

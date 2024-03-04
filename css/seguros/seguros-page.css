@@ -1,0 +1,72 @@
+.vantagens-bg {
+    background-color: var(--cor-12);
+}
+
+.vantagens-bg h2{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.vantagens-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+}
+
+.vantagens h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width:800px) {
+    .vantagens-lista {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:600px) {
+    .vantagens-lista {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.faq-bg {
+    padding: 60px 20px;
+}
+.faq-bg h2{
+    margin-bottom: 60px;
+}
+.faq-bg dl>div {
+    padding: 20px;
+    border-radius: 4px;
+}
+.faq-bg dl>div:nth-child(odd){
+    background-color: var(--cor-1);
+}
+
+.faq-bg dl dt{
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 8px;
+    transition: 0.3s;
+}
+.faq-bg dl dd{
+    margin-bottom: 10px;
+}
+.faq-bg dl dt::before{
+    content: "";
+    height: 8px;
+    width: 12px;
+    background-color: var(--cor-p1);
+    display: inline-block;
+    align-self: center;
+}
+.faq-bg dl dt::after{
+    content: url(/img/icones/seta-abrir.svg);
+    transition: 0.3s;
+}
+.faq-bg dl dt:hover::after{
+    content: url(/img/icones/seta-abrir.svg);
+    transform: rotate(180deg);
+}
