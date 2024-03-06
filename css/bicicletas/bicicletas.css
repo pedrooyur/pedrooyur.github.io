@@ -11,9 +11,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.bike-img {
+    position: relative;
+}
 .bike-img span{
-    grid-area: 1 / 1;
-    place-self: start end;
+    position: absolute;
+    top: 20px;
+    right: 0px;
     background-color: var(--cor-12);
     display: inline-block;
     padding: 8px 16px 8px 8px;
@@ -61,6 +65,9 @@
 
 .bikes a{ 
     place-self: end;
+    display: flex;
+    align-items: center;
+    word-break: keep-all;
     
 }
 .seta::after {
@@ -72,16 +79,19 @@
     background: url(/img/icones/seta.svg);
 }
 .seta:hover::after{
-    width: 20px;
+    transform: translateX(4px);
     transition: 0.2s;
 }
 
 .magic-bg {
     background-color: var(--cor-11);
-    box-sizing: border-box;
-    box-shadow: inset 400px 0px var(--cor-0);
+    background: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 0%);
 }
-
+@media (max-width:900px) {
+    .bikes a{
+        font-size: 1rem;
+    }
+}
 @media (max-width:800px) {
     .bikes-conteudo {
         grid-template-columns: 1fr 1fr;
@@ -90,13 +100,14 @@
         grid-template-columns: 1fr;
     }
     .magic-bg {
-        background-color: var(--cor-11);
-        box-sizing: border-box;
-        box-shadow: inset 0px 0px var(--cor-0);
+        background: var(--cor-11);
     }
 }
 @media (max-width:400px) {
     .bikes-conteudo {
         grid-template-columns: 1fr;
+    }
+    .bikes a{
+        place-self: start;
     }
 }

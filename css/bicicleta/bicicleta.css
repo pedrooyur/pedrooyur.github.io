@@ -8,13 +8,18 @@
     gap: 40px;
 }
 .bikeimages {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    height: 500px;
 }
 .bikeimages img{
+    flex: 1;
+    min-width: 200px;
     object-fit: cover;
+}
+.bikeimages img:first-child{
+    min-width: 100%;
 }
 .bike1 {
     grid-column: 1 / -1;
@@ -116,22 +121,25 @@
     .pedale-img{
         margin-left: -200px;
     }
-}
-@media (max-width:900px) {
-    .bikeimages {
-        grid-template-columns: 1fr;
-        height: 90%;
+    .rigth-b a {
+        margin-right: 10px;
     }
 }
+
 @media (max-width:750px) {
     .bicicleta {
         grid-template-columns: 1fr;
+        margin-top: -50px;
+        padding-bottom: 120px;
+    }
+    .bikeimages {
+        margin-top: -110px;
     }
     .bike1{
         margin-bottom: 340px;
     }
-    .other{
-        display: none;
+    .bike-rigth {
+        grid-row: 1;
     }
 
     
@@ -139,9 +147,18 @@
 @media (max-width:600px) {
     .pedale-bg {
         grid-template-columns: 1fr;
+        box-shadow: inset 0 -80px var(--cor-0)
     }
     .pedale-img {
-        max-height: 500px
+        max-height: 200px
+    }
+    .textoseguro {
+        grid-row: 1;
+    }
+    .bicicleta {
+        grid-template-columns: 1fr;
+        margin-top: -50px;
+        padding-bottom: 330px;
     }
    
 }

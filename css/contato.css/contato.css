@@ -1,3 +1,4 @@
+
 .contato-bg {
     background-color: var(--cor-11);
     box-sizing: border-box;
@@ -6,7 +7,7 @@
 .contato {
     background-color: var(--cor-12);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 5fr 7fr;
 }
 .contato-container {
     padding: 60px;
@@ -20,19 +21,46 @@
     flex-direction: column;
     grid-column: 1;
     margin-top: 40px;
+    max-width: max-content;
+    position: relative;
 }
 .contato-meios a:last-child{
     margin-top: 40px;
 }
+.contato-meios a:last-child::before{
+    content: "";
+    width: 24px;
+    height: 20px;
+    background: url(../../img/icones/telefone.svg) no-repeat;
+    position: absolute;
+    left: -24px;
+}
+.contato-meios a:first-child::before{
+    content: "";
+    width: 24px;
+    height: 20px;
+    background: url(../../img/icones/email.svg) no-repeat;
+    position: absolute;
+    left: -24px;
+}
 .contato-endereço li{
     padding-bottom: 5px;
     padding-top: 5px;
+    position: relative;
+}
+.contato-endereço li:first-child::before {
+    content: "";
+    width: 24px;
+    height: 20px;
+    background: url(../../img/icones/local.svg) no-repeat;
+    position: absolute;
+    left: -24px;
+    z-index: 1;
 }
 
 .redes{
     display: flex;
     grid-column: 1;
-    max-width: 20%;
     gap: 40px;
     margin-top: 20px;
 }
@@ -40,8 +68,6 @@
 .contato-formularios {
     background: var(--cor-0) url(/img/dec/bottom-right.svg) no-repeat bottom 20px right 20px;
     padding: 60px;
-    margin-left: -100px;
-    width: 100%;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -50,6 +76,31 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
+.form label{
+    display: block;
+    font: 400 1rem/1.5 "Poppins", sans-serif;
+    margin-bottom: 4px;
+}
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+    font: 400 1rem/1.5 "Roboto", sans-serif;
+    background: var(--cor-1);
+    border: 1px solid var(--cor-2);
+    padding: 12px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus {
+    outline: none;
+    border-color: var(--cor-p1);
+    background: var(--cor-0);
+    box-shadow: 0 0 0 2px #fea;
+}
+
 .form .col-2 {
     grid-column: span 2;
 }
@@ -67,6 +118,9 @@
 }
 .lojas img{
     border-radius: 4px 4px 0 0;
+}
+.loja-flex1,.loja-flex2{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0,1);
 }
 .loja-dados {
     display: grid;
@@ -99,7 +153,20 @@
     margin-bottom: -40px;
 }
 
+
 @media (max-width:800px) {
+    .contato-container {
+        justify-self: center;
+    }
+    .contato {
+        grid-template-columns: 1fr;
+    }
+    .form {
+        grid-template-columns: 1fr;
+    }
+    .form .col-2{
+        grid-column: 1;
+    }
     .lojas {
         grid-template-columns: 1fr;
     }

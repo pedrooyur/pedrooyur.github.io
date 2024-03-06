@@ -53,6 +53,8 @@
 }
 .faq-bg dl dd{
     margin-bottom: 10px;
+    padding-left: 20px;
+    max-width: 80ch;
 }
 .faq-bg dl dt::before{
     content: "";
