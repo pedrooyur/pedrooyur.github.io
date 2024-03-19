@@ -44,19 +44,31 @@
     background-color: var(--cor-1);
 }
 
-.faq-bg dl dt{
+.js .faq-bg dl dd {
+    display: none;
+}
+.faq-bg dl dd.ativa {
+    display: block;
+}
+
+.faq-bg dl button{
     margin-bottom: 20px;
     display: grid;
     grid-template-columns: auto 1fr auto;
     gap: 8px;
     transition: 0.3s;
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
 }
 .faq-bg dl dd{
     margin-bottom: 10px;
     padding-left: 20px;
     max-width: 80ch;
 }
-.faq-bg dl dt::before{
+.faq-bg dl button::before{
     content: "";
     height: 8px;
     width: 12px;
@@ -64,11 +76,15 @@
     display: inline-block;
     align-self: center;
 }
-.faq-bg dl dt::after{
+.faq-bg dl button::after{
     content: url(/img/icones/seta-abrir.svg);
     transition: 0.3s;
 }
-.faq-bg dl dt:hover::after{
+.faq-bg dl button:hover::after{
+    content: url(/img/icones/seta-abrir.svg);
+    transform: rotate(180deg);
+}
+.faq-bg dl button[aria-expanded=true]:after{
     content: url(/img/icones/seta-abrir.svg);
     transform: rotate(180deg);
 }
